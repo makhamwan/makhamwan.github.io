@@ -1,0 +1,89 @@
+<html>
+  <title>About me</title>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavbar()">&times;</a>
+        <a href="about-me.html">About me</a>
+        <a href="favorite.html">Favorite</a>
+        <a href="browser.html">Browser</a>
+      </div>
+    </div>
+    <div id="main">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/img1.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/img2.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/img3.jpg">
+        </div>
+      </div>
+      <div class="box-container">
+        <h1 class="page-title">About me</h1>
+        <div class="box-container bottom-line" style="text-align:center;">
+          <h2 class="sriracha" style="font-size:100px; display:inline;">"</h2>
+          <h2 style="display:inline;">Welcome, This page is presenting about my information.</h2>
+          <h2 class="sriracha" style="font-size:100px; display:inline;">"</h2>
+        </div>
+        <div class="box-container bottom-line">
+          <div class="inline">
+            <span class="list"></span>
+            <h3 class="bold"> Basic Infomation </h3>
+          </div>
+          <div class="inline">
+            <span class="list"></span>
+            <h3 class="bold"> Education </h3>
+          </div>
+          <div class="inline">
+            <span class="list"></span>
+            <h3 class="bold"> My goal life </h3>
+          </div>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>Basic Infomation </h2>
+          <h3>I'm Apichaya Bunchongchit. My nickname is Makhamwan. I'm 22 years old.</h3>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>Eduction </h2>
+          <h3>I've graduated high school from Benjamarachalai school under the royal patronage of his Masjesty the king. Now, I'm a senior student of software & knowledge Computer Engineering from Kasetsart University.</h3>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>My goal life </h2>
+          <h3>I would like apply for a job as a ux/ui designer</h3>
+        </div>
+        <div class="box-container" onclick="openNavbar()">
+          <h2 style="color: #F78145;"> See more content </h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      }
+      function openNavbar() {
+        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+      }
+      function closeNavbar() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>

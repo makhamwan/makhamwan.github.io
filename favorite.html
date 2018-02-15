@@ -1,0 +1,100 @@
+<html>
+  <title>Favorite</title>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavbar()">&times;</a>
+        <a href="about-me.html">About me</a>
+        <a href="favorite.html">Favorite</a>
+        <a href="browser.html">Browser</a>
+      </div>
+    </div>
+    <div id="main">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/img4.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/img5.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/img6.jpg">
+        </div>
+      </div>
+      <div class="box-container">
+        <h1 class="page-title">Favorite</h1>
+        <div class="box-container bottom-line" style="text-align:center;">
+          <h2 class="sriracha" style="font-size:100px; display:inline;">"</h2>
+          <h2 style="display:inline;">I like to listen musics, read novel and watch ancient dramas.</h2>
+          <h2 class="sriracha" style="font-size:100px; display:inline;">"</h2>
+        </div>
+        <div class="box-container bottom-line">
+          <div class="inline">
+            <span class="list"></span>
+            <h3 class="bold"> Music </h3>
+          </div>
+          <div class="inline">
+            <span class="list"></span>
+            <h3 class="bold"> Novel </h3>
+          </div>
+          <div class="inline">
+            <span class="list"></span>
+            <h3 class="bold"> Drama </h3>
+          </div>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>Music</h2>
+          <h3 class="bold"> BTS </h3>
+          <h3>Butterfly, Love is not over, Dope and MIC drop</h3>
+          <br>
+          <br>
+          <h3 class="bold"> RED VELVET </h3>
+          <h3>Ice-cream cake, Dump Dump, Dump and Red flavour</h3>
+          <br>
+          <br>
+          <h3 class="bold"> TWICE </h3>
+          <h3>Knock Knock Knock, Heart shaker and Likey</h3>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>Novel</h2>
+          <h3 class="bold">Founder of Diabolism (Mo Dao Zu Shi)</h3>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>Drama</h2>
+          <h3 class="bold"> General and I, </h3>
+          <h3 class="bold"> Oh my general and </h3>
+          <h3 class="bold"> Swordman </h3>
+        </div>
+        <div class="box-container" onclick="openNavbar()">
+          <h2 style="color: #F78145;"> See more content </h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      }
+      function openNavbar() {
+        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+      }
+      function closeNavbar() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>

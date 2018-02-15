@@ -1,0 +1,103 @@
+<html>
+  <title>Browser</title>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavbar()">&times;</a>
+        <a href="about-me.html">About me</a>
+        <a href="favorite.html">Favorite</a>
+        <a href="browser.html">Browser</a>
+      </div>
+    </div>
+    <div id="main">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/img7.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/img8.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/img9.jpg">
+        </div>
+      </div>
+      <div class="box-container">
+        <h1 class="page-title">Browser</h1>
+        <div class="box-container bottom-line" style="text-align:center;">
+          <h2 class="sriracha" style="font-size:100px; display:inline;">"</h2>
+          <h2 style="display:inline;">How web browsers & web servers works ? </h2>
+          <h2 class="sriracha" style="font-size:100px; display:inline;">"</h2>
+        </div>
+        <div class="box-container bottom-line">
+          <div class="inline">
+            <span class="list" style="width:50%"></span>
+            <h3 class="bold"> Web Browsers </h3>
+          </div>
+          <div class="inline">
+            <span class="list" style="width:50%;"></span>
+            <h3 class="bold"> Web Servers </h3>
+          </div>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>Web Browsers</h2>
+          <h3>A browser is a software application used to locate, retrieve and display content on the World Wide Web, including Web pages, images, video and other files. It is a group of structured codes which together performs a series of tasks to display a web page on the screen. According to the tasks they perform, these codes are made as different components.</h3>
+          <br>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> User Interface </span> The user interface is the space where User interacts with the browser. </li>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> Browser Engine </span> It works as a bridge between the User interface and the rendering engine. According to inputs from various user interfaces, it queries and manipulates the rendering engine.</li>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> Rendering Engine </span> The rendering engine, as the name suggests is responsible for rendering the requested web page on the browser screen. </li>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> Networking </span> Component of the browser which retrieves the URLs using the common internet protocols of HTTP or FTP. </li>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> JavaScript Interpreter </span> It interprets and executes the javascript code embedded in a website. </li>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> UI Backend </span> UI backend is used for drawing basic widgets like combo boxes and windows.
+          </li>
+        </div>
+        <div class="box-container bottom-line">
+          <h2>Web Servers</h2>
+          <h3>The browser slices the URL into 3 parts</h3>
+          <br>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> http:// </span> The target document can be retrieved from web server, which understands the HTTP protocol. The HTTP protocol is language of communication between browsers and web servers. </li>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> www.samplelink.com </span> This is the host name of the computer from which the document can be downloaded.  </li>
+          <br>
+          <li> <span style="font-weight:bold; color:#F78145;"> sample.html </span> This is the virtual path of the document in the www.samplelink.com's web server. </li>
+        </div>
+        <div class="box-container" onclick="openNavbar()">
+          <h2 style="color: #F78145;"> See more content </h2>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    function openNavbar() {
+      document.getElementById("mySidenav").style.width = "300px";
+      document.getElementById("main").style.marginLeft = "300px";
+    }
+    function closeNavbar() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+    </script>
+  </body>
+</html>

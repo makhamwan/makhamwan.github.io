@@ -105,7 +105,7 @@ function checkAnswer(choice) {
 
 function setTimer() {
   localTime = localTime - 1;
-  $(".localTime").html("time: " + localTime + " sec");
+  $(".localTime").html(localTime + " sec");
   if (beginTime) {
     setTimeout(setTimer, 1000);
   }
@@ -133,7 +133,6 @@ function newQuiz() {
     $(".numQuiz").html("No: " + numQuiz + "/" + numQuiz);
     $(".toggle").show();
     $(".timeToPlay").html("Time: " + Math.floor(timeToPlay / 60) + " minute " + timeToPlay % 60 + " sec");
-    $(".newGame").show();
   }
   else {
     setQuestion();

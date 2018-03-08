@@ -1,4 +1,3 @@
-
 $(".block-choice").hide();
 $(".image").hide();
 
@@ -21,6 +20,7 @@ $(document).ready(function () {
     $(".timeToPlay").hide();
     $(".score").hide();
     $(".newGame").hide();
+    sumGameNo = 1;
   });
 });
 
@@ -76,6 +76,9 @@ function start() {
   $(".block-choice").show();
   $(".exit").show();
   $(".image").show();
+  $(".numQuiz").show();
+  $(".timeToPlay").show();
+  $(".score").show();
   setQuestion();
   $(".numQuiz").html("No: " + sumGameNo + "/" + numQuiz);
   startGame();

@@ -6,7 +6,7 @@ body {
 header {
   text-align: center;
   height: auto;
-  background-color: #424D3E;
+  background-color: #FFA700;
   padding: 0;
   margin-bottom: 100px;
 }
@@ -45,6 +45,18 @@ button {
 
 .score {
   font-size: 40px;
-  padding: 20px;
+  padding: 40px;
   text-shadow: 10px;
+  text-align: right;
+  margin: 50px;
+  display: inline;
+}
+
+.numQuiz {
+  font-size: 40px;
+  padding: 40px;
+  text-shadow: 10px;
+  text-align: left;
+  margin: 50px;
+  display: inline;
 }

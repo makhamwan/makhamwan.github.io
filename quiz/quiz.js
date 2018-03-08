@@ -13,18 +13,6 @@ var beginTime;
 var myPicture;
 
 $(document).ready(function () {
-  $(".newGame").click(function () {
-    $(".option1").show();
-    $(".option2").show();
-    $(".numQuiz").hide();
-    $(".timeToPlay").hide();
-    $(".score").hide();
-    $(".newGame").hide();
-    sumGameNo = 1;
-  });
-});
-
-$(document).ready(function () {
   $(".option1").click(function () {
     $(".option1").hide();
     $(".option2").hide();

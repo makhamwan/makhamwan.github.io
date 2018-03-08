@@ -1,5 +1,4 @@
 $(".block-choice").hide();
-$(".image").hide();
 
 var sumQuiz = list;
 var listQuestion = [];
@@ -33,6 +32,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".choice1").click(function () {
     checkAnswer($(".choice1").text());
+    $(".score").hide();
     newQuiz();
   });
 });
@@ -40,13 +40,16 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".choice2").click(function () {
     checkAnswer($(".choice2").text());
+    $(".score").hide(); 
     newQuiz();
+
   });
 });
 
 $(document).ready(function () {
   $(".choice3").click(function () {
     checkAnswer($(".choice3").text());
+    $(".score").hide();
     newQuiz();
   });
 });
@@ -54,6 +57,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".choice4").click(function () {
     checkAnswer($(".choice4").text());
+    $(".score").hide();
     newQuiz();
   });
 });

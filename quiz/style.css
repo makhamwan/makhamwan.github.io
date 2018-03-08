@@ -45,29 +45,19 @@ button {
 }
 
 .score {
-  /* font-size: 40px; */
   padding: 40px;
-  /* text-shadow: 10px;
-  right: 50px;
-  margin: 100px; */
   display: inline;
+  animation-name: show;
+  animation-duration: 2s;
 }
 
 .localTime {
-  /* font-size: 40px; */
   padding: 40px;
-  /* text-shadow: 10px;
-  right: 50px;
-  margin: 100px; */
   display: inline;
 }
 
 .numQuiz {
-  /* font-size: 40px; */
   padding: 40px;
-  /* text-shadow: 10px;
-  right: 50px;
-  margin: 100px; */
   display: inline;
 }
 
@@ -76,7 +66,12 @@ button {
   to {background-color: #red;}
 }
 
+@keyframes show {
+  from {opacity: 0;}
+  to {opacity: 100%;}
+}
+
 header {
   animation-name: changeColor;
-  animation-duration: 20s;
+  animation-duration: 15s;
 }

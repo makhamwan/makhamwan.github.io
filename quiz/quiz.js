@@ -1,9 +1,6 @@
-$(".option1").hide();
-$(".option2").hide();
+
 $(".block-choice").hide();
 $(".image").hide();
-$(".textHow").hide();
-$(".textAbout").hide();
 
 var sumQuiz = list;
 var listQuestion = [];
@@ -15,6 +12,17 @@ var sumGameNo = 1;
 var localTime = 5;
 var beginTime;
 var myPicture;
+
+$(document).ready(function () {
+  $(".newGame").click(function () {
+    $(".option1").show();
+    $(".option2").show();
+    $(".numQuiz").hide();
+    $(".timeToPlay").hide();
+    $(".score").hide();
+    $(".newGame").hide();
+  });
+});
 
 $(document).ready(function () {
   $(".option1").click(function () {
@@ -116,6 +124,7 @@ function setTimer() {
 }
 function startGame() {
   beginTime = true;
+  $(".score").html( score + " score");
 }
 function stopTimer() {
   beginTime = false;
@@ -142,7 +151,6 @@ function newQuiz() {
     setTimer();
     startGame();
   }
-  $(".score").html("Score: " + score + " score");
   $(".score").show();
 }
 $(document).ready(function () {
